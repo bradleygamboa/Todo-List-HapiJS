@@ -1,0 +1,12 @@
+<ul>
+{{#each tasks}}
+<li> {{id}} - {{task}} - {{done}} <form method="POST" action="/todos/{{id}}?_method=DELETE"> <button type="submit">Delete Todo</button>
+</form></li>
+{{/each}}
+</ul>
+
+<form id="addTodo" method="POST" action="/todos">
+<p>Add a Task</p>
+<input type="text" name="newTask" />
+<input type="submit" name="submit" value="Add Task">
+</form>
